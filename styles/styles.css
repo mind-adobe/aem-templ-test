@@ -140,12 +140,11 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
   color: var(--link-hover-color);
 }
 
 /* buttons */
-a.button:any-link,
+/* a.button:any-link,
 button {
   font-family: var(--body-font-family);
   display: inline-block;
@@ -164,15 +163,15 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 30px;
-}
+} */
 
-a.button:hover,
+/* a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
-}
+} */
 
 button:disabled,
 button:disabled:hover {
@@ -217,9 +216,18 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 80vw;
     margin: auto;
   }
+  
+}
+
+.section > .a:any-link{
+  text-decoration: none;
+}
+
+.section > .a:hover{
+  text-decoration: none!important;
 }
 
 /* section metadata */
@@ -227,3 +235,4 @@ main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
 }
+
