@@ -1,0 +1,19 @@
+.banner img{
+    width: 100%;
+}
+
+.banner{
+    margin-top:15px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.banner a:any-link{
+    text-decoration: underline;
+    color: var(--link-color);
+    font-size:medium;
+}
+
+.banner  *{
+    margin:0;
+}
