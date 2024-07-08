@@ -97,8 +97,9 @@
     color: #fff;
     background: #1a2434;
     padding:10px;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
     border:0;
     cursor: pointer;
 }
