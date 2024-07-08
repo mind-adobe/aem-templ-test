@@ -12,7 +12,6 @@ const setupVisibility = (block) =>{
     };
     const currentBreakpoint = Object.keys(breakpoints).find(key => window.innerWidth < breakpoints[key]) || 'desktop';
     const maxElements = maxElementsPerView[currentBreakpoint];
-    console.log('currentBreakpoint',currentBreakpoint,window);
     if(block.children.length > maxElements){
         [...block.children].forEach((elem,index) => {
             if(index >= maxElements)
