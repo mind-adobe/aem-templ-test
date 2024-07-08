@@ -1,54 +1,53 @@
-.discover{
+.stories{
     margin-top:30px;
 }
-.discover-card{
+.stories-card{
     display:flex;
     flex-direction: column;
 
 }
-.discover-card .discover-card-img{
+.stories-card .stories-card-img{
     margin:0;
-    margin-bottom: 25px;
+    margin-bottom: 5px;
 }
 
-.discover-card-img picture img{
+.stories-card-img picture img{
     aspect-ratio: 1.6/1;
     object-fit:fill;
     width: 100%;
 }
 
-.discover-card .discover-card-title{
+.stories-card .stories-card-title{
     margin:0;
+    font-size:small;
+    margin-bottom: 5px;
+ 
+}
+.stories-card-title > a:any-link{
+    text-decoration: none;
+    color:unset;
+}
+
+.stories-card-desc > a:any-link{
+    text-decoration: none;
+    color:unset;
+}
+
+.stories-card .stories-card-desc{
+    margin:0;
+    margin-bottom: 10px;
     font-size:large;
-    margin-bottom: 10px;
-}
-.discover-card .discover-card-desc{
-    margin:0;
-    margin-bottom: 10px;
-    font-size:small;
-}
-
-.discover-card .discover-card-url a{
-    margin:0;
-    font-size:small;
-    background-color: white;
-    color: #ff8000;
-    text-decoration-line: underline;
-    text-decoration-color: #ff8000;
-    padding: 0;
-}
-
-.discover-card .discover-card-url {
-    margin:0;
+    text-decoration: none;
+    color:unset;
 }
 
 @media (width <= 500px){
-    .discover-card{
+    .stories-card{
         width: 80vw;
 
     }
 
-    .discover{
+    .stories{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -58,15 +57,13 @@
 }
 
 @media (width > 500px){
-    .discover-card{
+    .stories-card{
         width: 45%;
         min-width: 200px;
         align-self: stretch;
     }
-    .discover-card-url{
-        margin-top: auto!important;
-    }
-    .discover{
+
+    .stories{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -76,16 +73,33 @@
 }
 
 @media (width > 800px){
-    .discover-card{
+    .stories-card{
         width: 30%;
         min-width: 200px;
         margin-bottom: 20px;
     }
-    .discover{
+    .stories{
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
         gap:3%;
     }
+}
+
+/* for the nth element>=3 keep all elements hidden*/
+
+.stories-card:nth-child(n+4){
+    display:none;
+}
+
+.stories-view-more{
+    color: #fff;
+    background: #1a2434;
+    padding:10px;
+    position: relative;
+    left:50%;
+    transform: translateX(-50%);
+    border:0;
+    cursor: pointer;
 }

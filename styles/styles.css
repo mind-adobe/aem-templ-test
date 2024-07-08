@@ -16,8 +16,9 @@
   --link-hover-color: #136ff6;
   --background-color: white;
   --light-color: #eee;
-  --dark-color: #ccc;
+  --dark-color: #0c1324;
   --text-color: black;
+  --contrast-color: #0c1324;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback;
@@ -37,7 +38,6 @@
   --heading-font-size-s: 20px;
   --heading-font-size-xs: 18px;
   --heading-font-size-xxs: 16px;
-
   /* nav height */
   --nav-height: 64px;
   --header-border-color : #eaeaeaea;
@@ -140,12 +140,11 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
   color: var(--link-hover-color);
 }
 
 /* buttons */
-a.button:any-link,
+/* a.button:any-link,
 button {
   font-family: var(--body-font-family);
   display: inline-block;
@@ -164,15 +163,15 @@ button {
   overflow: hidden;
   text-overflow: ellipsis;
   border-radius: 30px;
-}
+} */
 
-a.button:hover,
+/* a.button:hover,
 a.button:focus,
 button:hover,
 button:focus {
   background-color: var(--link-hover-color);
   cursor: pointer;
-}
+} */
 
 button:disabled,
 button:disabled:hover {
@@ -217,13 +216,33 @@ main .section {
 
 @media (width >= 900px) {
   .section > div {
-    max-width: 1200px;
+    max-width: 80vw;
     margin: auto;
   }
+  
+}
+
+.section > .a:any-link{
+  text-decoration: none;
+}
+
+.section > .a:hover{
+  text-decoration: none!important;
 }
 
 /* section metadata */
 main .section.light,
 main .section.highlight {
   background-color: var(--light-color);
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+}
+
+main .section.dark a:any-link {
+  color: var(--light-color);
+  text-decoration: underline;
+  /* padding:15px; */
 }
