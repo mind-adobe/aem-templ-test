@@ -10,6 +10,13 @@
     margin:0;
     margin-bottom: 25px;
 }
+
+.discover-card-img picture img{
+    aspect-ratio: 1.6/1;
+    object-fit:fill;
+    width: 100%;
+}
+
 .discover-card .discover-card-title{
     margin:0;
     font-size:large;
@@ -37,7 +44,7 @@
 
 @media (width <= 500px){
     .discover-card{
-        max-width: 80vw;
+        width: 80vw;
 
     }
 
@@ -52,8 +59,12 @@
 
 @media (width > 500px){
     .discover-card{
-        max-width: 45%;
+        width: 45%;
         min-width: 200px;
+        align-self: stretch;
+    }
+    .discover-card-url{
+        margin-top: auto!important;
     }
     .discover{
         display: flex;
@@ -66,8 +77,9 @@
 
 @media (width > 800px){
     .discover-card{
-        max-width: 30%;
+        width: 30%;
         min-width: 200px;
+        margin-bottom: 20px;
     }
     .discover{
         display: flex;
@@ -77,4 +89,3 @@
         gap:3%;
     }
 }
-
