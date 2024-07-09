@@ -45,7 +45,7 @@
 }
 
 @media (width <= 500px) {
-	.discover-card {
+	.discover-card-wrapper {
 		width: 80vw;
 	}
 
@@ -59,7 +59,7 @@
 }
 
 @media (width > 500px) {
-	.discover-card {
+	.discover-card-wrapper {
 		width: 45%;
 		min-width: 200px;
 		align-self: stretch;
@@ -79,7 +79,7 @@
 }
 
 @media (width > 800px) {
-	.discover-card {
+	.discover-card-wrapper {
 		width: 30%;
 		min-width: 200px;
 		margin-bottom: 20px;
@@ -92,4 +92,8 @@
 		align-items: flex-start;
 		gap: 3%;
 	}
+}
+
+.discover-card-wrapper {
+	display: inline-flex;
 }

@@ -3,20 +3,17 @@ export default function decorate(block) {
 		.map((x) => x.firstElementChild)
 		.filter((elem) => !!elem && elem.children.length === 4)
 		.forEach((elem) => {
-			const img = elem.children[0];
-			const title = elem.children[1];
-			const desc = elem.children[2];
-			const url = elem.children[3];
+			const [img, title, desc, url] = elem.children;
 
-			img.classList.add("discover-card-img");
+			img.classList.add('discover-card-img');
+			title.classList.add('discover-card-title');
+			desc.classList.add('discover-card-desc');
+			url.classList.add('discover-card-url');
 
-			title.classList.add("discover-card-title");
-			desc.classList.add("discover-card-desc");
-			url.classList.add("discover-card-url");
-			elem.classList.add("discover-card");
+			elem.classList.add('discover-card');
 		});
-	[...block.children].forEach((elem) =>
-		elem.replaceWith(elem.firstElementChild)
+	[...block.children].forEach((e) =>
+		e.classList.add('discover-card-wrapper')
 	);
 	return block;
 }
