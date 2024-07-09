@@ -230,7 +230,7 @@ main .section {
 
 @media (width >= 600px) {
 	main .section {
-		padding: 64px 32px;
+		padding: 64px 6em;
 	}
 }
 
@@ -238,6 +238,10 @@ main .section {
 	.section > div {
 		max-width: 80vw;
 		margin: auto;
+	}
+
+	.section.left-70 > div {
+		margin: 0;
 	}
 }
 
@@ -263,4 +267,8 @@ main .section.dark {
 main .section.dark a:any-link {
 	color: var(--light-color);
 	text-decoration: underline;
+}
+
+.section.left-70 {
+	display: flex;
 }

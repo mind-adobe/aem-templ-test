@@ -1,5 +1,4 @@
 .stories {
-	margin-top: 30px;
 }
 
 .stories-wrapper {
@@ -79,6 +78,16 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		gap: 3%;
+	}
+
+	.stories.block.left-70 .stories-card {
+		flex-grow: 1;
+	}
+
+	.stories.block.left-70 {
+		width: 98%;
+		gap: 5%;
+		justify-content: space-between;
 	}
 }
 
