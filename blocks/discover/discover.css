@@ -1,91 +1,95 @@
-.discover{
-    margin-top:30px;
-}
-.discover-card{
-    display:flex;
-    flex-direction: column;
-
-}
-.discover-card .discover-card-img{
-    margin:0;
-    margin-bottom: 25px;
+.discover {
+	margin-top: 30px;
 }
 
-.discover-card-img picture img{
-    aspect-ratio: 1.6/1;
-    object-fit:fill;
-    width: 100%;
+.discover-card {
+	display: flex;
+	flex-direction: column;
 }
 
-.discover-card .discover-card-title{
-    margin:0;
-    font-size:large;
-    margin-bottom: 10px;
-}
-.discover-card .discover-card-desc{
-    margin:0;
-    margin-bottom: 10px;
-    font-size:small;
+.discover-card .discover-card-img {
+	margin: 0;
+	margin-bottom: 25px;
 }
 
-.discover-card .discover-card-url a{
-    margin:0;
-    font-size:small;
-    background-color: white;
-    color: #ff8000;
-    text-decoration-line: underline;
-    text-decoration-color: #ff8000;
-    padding: 0;
+.discover-card-img picture img {
+	aspect-ratio: 1.6/1;
+	object-fit: fill;
+	width: 100%;
+}
+
+.discover-card .discover-card-title {
+	margin: 0;
+	font-size: large;
+	margin-bottom: 10px;
+}
+
+.discover-card .discover-card-desc {
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: small;
+}
+
+.discover-card .discover-card-url a {
+	margin: 0;
+	font-size: small;
+	background-color: white;
+	color: #ff8000;
+	text-decoration-line: underline;
+	text-decoration-color: #ff8000;
+	padding: 0;
 }
 
 .discover-card .discover-card-url {
-    margin:0;
+	margin: 0;
 }
 
-@media (width <= 500px){
-    .discover-card{
-        width: 80vw;
+@media (width <= 500px) {
+	.discover-card {
+		width: 80vw;
+	}
 
-    }
-
-    .discover{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        gap:2em;
-    }
+	.discover {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+	}
 }
 
-@media (width > 500px){
-    .discover-card{
-        width: 45%;
-        min-width: 200px;
-        align-self: stretch;
-    }
-    .discover-card-url{
-        margin-top: auto!important;
-    }
-    .discover{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap:3%;
-    }
+@media (width > 500px) {
+	.discover-card {
+		width: 45%;
+		min-width: 200px;
+		align-self: stretch;
+	}
+
+	.discover-card-url {
+		margin-top: auto !important;
+	}
+
+	.discover {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 3%;
+	}
 }
 
-@media (width > 800px){
-    .discover-card{
-        width: 30%;
-        min-width: 200px;
-        margin-bottom: 20px;
-    }
-    .discover{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        gap:3%;
-    }
+@media (width > 800px) {
+	.discover-card {
+		width: 30%;
+		min-width: 200px;
+		margin-bottom: 20px;
+	}
+
+	.discover {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 3%;
+	}
 }
