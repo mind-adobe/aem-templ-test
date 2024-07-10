@@ -30,6 +30,7 @@
 	--body-font-size-m: 22px;
 	--body-font-size-s: 18px;
 	--body-font-size-xs: 16px;
+	--body-font-size-xxs: 14px;
 
 	/* heading sizes */
 	--heading-font-size-xxl: 48px;
@@ -271,4 +272,11 @@ main .section.dark a:any-link {
 
 .section.left-70 {
 	display: flex;
+}
+
+@media (width <= 950px) {
+	.section.left-70 {
+		display: flex;
+		flex-direction: column;
+	}
 }

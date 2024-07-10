@@ -52,14 +52,52 @@
 
 .block.newscards .category-news-card {
 	color: blueviolet;
-	font-size: var(--body-font-size-xs);
+	font-size: var(--body-font-size-xxs);
 	margin: 0;
 	margin-right: 10px;
 }
 
 .block.newscards .date-news-card {
 	color: gray;
-	font-size: var(--body-font-size-xs);
+	font-size: var(--body-font-size-xxs);
 	margin: 0;
 	margin-right: 10px;
+}
+
+.block.newscards {
+	height: 100%;
+}
+
+.newscards-wrapper {
+	max-height: min-content;
+}
+
+@media (width <= 950px) {
+	.section.left-70 .newscards-wrapper {
+		width: 100%;
+		max-width: unset;
+	}
+	.section.left-70 .newscards-wrapper .newscards > div {
+		width: 48%;
+		display: inline-flex;
+		margin-bottom: 10px;
+	}
+	.section.left-70 .newscards.block {
+		display: block;
+	}
+}
+
+@media (width <= 700px) {
+	.section.left-70 .newscards-wrapper {
+		width: 100%;
+		max-width: unset;
+	}
+	.section.left-70 .newscards-wrapper .newscards > div {
+		width: 100%;
+		display: inline-flex;
+		margin-bottom: 10px;
+	}
+	.section.left-70 .newscards.block {
+		display: block;
+	}
 }
