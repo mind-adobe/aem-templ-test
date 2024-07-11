@@ -1,152 +1,152 @@
 .stories-wrapper {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 @media (width >= 900px) {
-	.section .stories-wrapper {
-		margin-bottom: 30px;
-	}
+    .section .stories-wrapper {
+        margin-bottom: 30px;
+    }
 }
 
 .stories-card {
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .stories-card .stories-card-img {
-	margin: 0;
-	margin-bottom: 5px;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .stories-card-img picture img {
-	aspect-ratio: 1.6/1;
-	object-fit: fill;
-	width: 100%;
+    aspect-ratio: 1.6/1;
+    object-fit: fill;
+    width: 100%;
 }
 
 .stories-card .stories-card-title {
-	margin: 0;
-	font-size: small;
-	margin-bottom: 5px;
+    margin: 0;
+    font-size: small;
+    margin-bottom: 5px;
 }
 
 .stories-card-title > a:any-link {
-	text-decoration: none;
-	color: unset;
+    text-decoration: none;
+    color: unset;
 }
 
 .stories-card-desc > a:any-link {
-	text-decoration: none;
-	color: unset;
+    text-decoration: none;
+    color: unset;
 }
 
 .stories-card .stories-card-desc {
-	margin: 0;
-	margin-bottom: 10px;
-	font-size: large;
-	text-decoration: none;
-	color: unset;
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: large;
+    text-decoration: none;
+    color: unset;
 }
 
 @media (width <= 500px) {
-	.stories-card {
-		width: 80vw;
-	}
+    .stories-card {
+        width: 80vw;
+    }
 
-	.stories {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		gap: 2em;
-	}
+    .stories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+    }
 }
 
-@media (width > 680px) {
-	.stories-card {
-		width: 45%;
-		min-width: 180px;
-		align-self: stretch;
-	}
+@media (width > 600px) {
+    .stories-card {
+        width: 45%;
+        min-width: 180px;
+        align-self: stretch;
+    }
 
-	.stories {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: 3%;
-	}
+    .stories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3%;
+    }
 
-	.stories.block.left-70 .stories-card {
-		flex-grow: 1;
-	}
+    .stories.block.left-70 .stories-card {
+        flex-grow: 1;
+    }
 
-	.stories.block.left-70 {
-		width: 98%;
-		gap: 5%;
-		justify-content: space-between;
-	}
+    .stories.block.left-70 {
+        width: 98%;
+        gap: 5%;
+        justify-content: space-between;
+    }
 }
 
-@media (width > 830px) {
-	.stories-card {
-		width: 30%;
-		min-width: 180px;
-		margin-bottom: 20px;
-	}
+@media (width >= 880px) {
+    .stories-card {
+        width: 30%;
+        min-width: 180px;
+        margin-bottom: 20px;
+    }
 
-	.stories {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: flex-start;
-		gap: 3%;
-	}
+    .stories {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 3%;
+    }
 }
 
 .stories-view-more {
-	color: #fff;
-	background: #1a2434;
-	padding: 10px;
-	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
-	border: 0;
-	cursor: pointer;
+    color: #fff;
+    background: #1a2434;
+    padding: 10px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 0;
+    cursor: pointer;
 }
 
 .section.matches-section {
-	background-color: #eaeaea;
+    background-color: #eaeaea;
 }
 
 .stories.discover .stories-card .stories-url {
-	margin-top: auto;
+    margin-top: auto;
 }
 
 .stories.discover .stories-card > div {
-	height: 100%;
-	display: flex;
-	flex-direction: column;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .stories.discover .stories-card-desc {
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 2;
-	line-clamp: 2;
-	-webkit-box-orient: vertical;
-	font-size: var(--body-font-size-xs);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: var(--body-font-size-xs);
 }
 
 .stories.discover .stories-card-title {
-	font-size: var(--body-font-size-s);
+    font-size: var(--body-font-size-s);
 }
 
 .stories.discover .stories-url {
-	font-size: var(--body-font-size-xxs);
+    font-size: var(--body-font-size-xxs);
 }
 
 .stories.discover .stories-url a:any-link {
-	text-decoration: underline;
+    text-decoration: underline;
 }
