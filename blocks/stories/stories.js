@@ -1,6 +1,6 @@
 const breakpoints = {
 	mobile: 500,
-	tablet: 800,
+	tablet: 830,
 	desktop: 1200,
 };
 
@@ -41,23 +41,25 @@ const setupVisibility = (block) => {
 	}
 };
 
+/**
+ *
+ * @param {Element} block
+ */
 export default function decorate(block) {
-	[...block.children].forEach((elem) =>
-		elem.replaceWith(elem.firstElementChild)
-	);
 	[...block.children]
-		.filter((elem) => !!elem && elem.children.length === 3)
+		.map((x) => x.firstElementChild)
 		.forEach((elem) => {
-			const img = elem.children[0];
-			const title = elem.children[1];
-			const desc = elem.children[2];
-
+			const [img, title, desc, url] = elem.querySelectorAll(':scope > *');
 			img.classList.add('stories-card-img');
 			title.classList.add('stories-card-title');
 			desc.classList.add('stories-card-desc');
-			elem.classList.add('stories-card');
+
+			if (url) url.classList.add('stories-url');
+
+			elem.parentElement.classList.add('stories-card');
 		});
-	setupVisibility(block);
-	window.addEventListener('resize', () => setupVisibility(block));
-	return block;
+	if (!block.classList.contains('discover')) {
+		setupVisibility(block);
+		window.addEventListener('resize', () => setupVisibility(block));
+	}
 }
