@@ -22,6 +22,7 @@
 .splitview.article {
 	height: 500px;
 }
+
 .splitview.article .description {
 	font-size: var(--body-font-size-s);
 }
@@ -33,19 +34,24 @@
 		height: unset;
 		max-height: 600px;
 	}
+
 	.splitview.article {
 		height: unset;
 	}
+
 	.splitview.article > div > div {
 		min-height: 100%;
 	}
+
 	.splitview.article > div > div:nth-child(2) {
 		padding-inline: 30px;
 	}
+
 	.splitview.article .description,
 	.tag {
 		padding-inline: 0 !important;
 	}
+
 	.splitview.article .description {
 		font-size: revert;
 	}
@@ -66,13 +72,15 @@
 	flex-direction: column;
 	background: linear-gradient(
 		90deg,
-		rgba(2, 0, 36, 1) 0%,
-		rgba(187, 174, 174, 1) 100%
+		rgb(2 0 36 / 100%) 0%,
+		rgb(187 174 174 / 100%) 100%
 	);
 }
+
 .splitview.article .tag {
 	margin: 0;
 }
+
 .splitview.article.turqoise .tag a {
 	color: turquoise;
 	font-size: var(--body-font-size-xxs);

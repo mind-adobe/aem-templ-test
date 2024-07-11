@@ -1,7 +1,7 @@
 const mediaQueries = {
     mobile: `(width <= 500px)`,
-    tablet: `(width > 500px) and (width < 800px)`,
-    desktop: `(width > 800px )`,
+    tablet: `(width > 500px) and (width < 880px)`,
+    desktop: `(width > 880px )`,
 };
 
 const maxElementsPerView = {
@@ -10,15 +10,23 @@ const maxElementsPerView = {
     desktop: 3,
 };
 
+/**
+ *
+ * @param {Element} block
+ */
 const setupVisibility = (block) => {
     const currentBreakpoint = (Object.entries(mediaQueries).find(
         (value) => window.matchMedia(value[1]).matches
     ) || ['desktop'])[0];
     console.log(currentBreakpoint);
     const maxElements = maxElementsPerView[currentBreakpoint];
-    if (block.children.length > maxElements) {
+    const viewMore =
+        block.parentElement.querySelectorAll('.stories-view-more')[0];
+    viewMore.style.display = '';
+    if (block.children.length >= maxElements) {
+        // viewMore.style.display = '';
         [...block.children].forEach((elem, index) => {
-            if (index >= maxElements) {
+            if (index > maxElements) {
                 elem.style.display = 'none';
             } else {
                 elem.style.display = '';
@@ -46,7 +54,17 @@ export default function decorate(block) {
         });
 
     if (!block.classList.contains('discover')) {
+        const viewMore = document.createElement('button');
+        viewMore.classList.add('stories-view-more');
+        viewMore.textContent = 'View More';
+        if (block.nextSibling) {
+            block.parentNode.insertBefore(viewMore, block.nextSibling);
+        } else {
+            block.parentNode.appendChild(viewMore);
+        }
+
         setupVisibility(block);
+
         for (let q of Object.values(mediaQueries))
             window
                 .matchMedia(q)
@@ -57,13 +75,5 @@ export default function decorate(block) {
         )
             return;
         console.log('created');
-        const viewMore = document.createElement('button');
-        viewMore.classList.add('stories-view-more');
-        viewMore.textContent = 'View More';
-        if (block.nextSibling) {
-            block.parentNode.insertBefore(viewMore, block.nextSibling);
-        } else {
-            block.parentNode.appendChild(viewMore);
-        }
     }
 }

@@ -3,7 +3,6 @@
 }
 
 .imagebg ul {
-	align-items: center;
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
@@ -17,7 +16,7 @@
 	max-height: 450px;
 	object-fit: cover;
 	inset: 0;
-	opacity: 50%;
+	opacity: 0.5;
 	box-sizing: border-box;
 	border: 1px solid #eaeaea;
 }
@@ -37,6 +36,8 @@
 	padding-inline: 40px;
 	display: flex;
 	justify-content: center;
+
+	/* padding: 5px; */
 }
 
 .imagebg-content * {
@@ -44,4 +45,8 @@
 	margin-right: auto;
 	color: white;
 	display: inline;
+
+	/* margin: 10px; */
+
+	/* padding: 0; */
 }

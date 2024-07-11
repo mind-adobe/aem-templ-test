@@ -16,17 +16,17 @@
 .block.newscards > div > div {
 	display: flex;
 	flex-wrap: wrap;
+
 	/* border-bottom: 1px solid rgb(192, 184, 184); */
 	border-left: 3px solid #eaeaea;
 	padding-inline: 1em;
 }
 
-.block.newscards > div > div:after {
+.block.newscards > div > div::after {
 	content: '';
 	display: block;
 	width: 70%;
 	margin: 1em auto 0;
-
 	border-bottom: 1px solid #eaeaea;
 }
 
@@ -77,11 +77,13 @@
 		width: 100%;
 		max-width: unset;
 	}
+
 	.section.left-70 .newscards-wrapper .newscards > div {
 		width: 48%;
 		display: inline-flex;
 		margin-bottom: 10px;
 	}
+
 	.section.left-70 .newscards.block {
 		display: block;
 	}
@@ -92,11 +94,13 @@
 		width: 100%;
 		max-width: unset;
 	}
+
 	.section.left-70 .newscards-wrapper .newscards > div {
 		width: 100%;
 		display: inline-flex;
 		margin-bottom: 10px;
 	}
+
 	.section.left-70 .newscards.block {
 		display: block;
 	}
