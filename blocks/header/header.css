@@ -345,3 +345,11 @@ nav .logo img {
         width: 100%;
     }
 }
+
+nav[data-open='true'] #nav-overlay-menu {
+    /* display: flex; */
+}
+
+nav[data-open='false'] #nav-overlay-menu {
+    display: none;
+}
