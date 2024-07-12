@@ -14,14 +14,14 @@ export default async function decorate(block) {
         ? new URL(navMeta, window.location).pathname
         : '/nav';
     const fragment = await loadFragment(navPath);
-    console.log(navPath, fragment);
+    console.log(navPath, fragment.children);
     // decorate nav DOM
     block.textContent = '';
     const nav = document.createElement('nav');
     nav.id = 'nav';
-    console.log(fragment);
-    while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
+    while (fragment.firstElementChild && nav.children.length < 1)
+        nav.append(fragment.firstElementChild);
+    const overlayData = fragment.firstElementChild;
     // hamburger for mobile
     const hamburger = document.createElement('div');
     hamburger.classList.add('nav-hamburger');
@@ -38,7 +38,7 @@ export default async function decorate(block) {
     const overLay = document.createElement('div');
 
     overLay.id = 'nav-overlay-menu';
-
+    overLay.appendChild(overlayData);
     nav.appendChild(overLay);
 
     const logo = document.createElement('div');
