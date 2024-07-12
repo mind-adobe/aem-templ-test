@@ -22,16 +22,16 @@ const setupVisibility = (block) => {
     const maxElements = maxElementsPerView[currentBreakpoint];
     const viewMore =
         block.parentElement.querySelectorAll('.stories-view-more')[0];
-    viewMore.style.display = '';
-    if (block.children.length >= maxElements) {
-        // viewMore.style.display = '';
-        [...block.children].forEach((elem, index) => {
-            if (index > maxElements) {
-                elem.style.display = 'none';
-            } else {
-                elem.style.display = '';
-            }
-        });
+    viewMore.style.display = 'none';
+    [...block.children].forEach((elem, index) => {
+        if (index >= maxElements) {
+            elem.style.display = 'none';
+        } else {
+            elem.style.display = '';
+        }
+    });
+    if (block.children.length > maxElements) {
+        viewMore.style.display = '';
     }
 };
 
