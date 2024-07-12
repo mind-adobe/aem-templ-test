@@ -30,6 +30,7 @@
     display: flex;
     justify-content: center;
     z-index: 1;
+
     /* padding: 5px; */
 }
 
@@ -52,6 +53,7 @@
 .block.imagebg .bg {
     top: 0;
     position: absolute;
+
     /* align-self: stretch; */
     height: 100%;
     width: 100%;
