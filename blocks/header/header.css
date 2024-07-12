@@ -253,6 +253,7 @@ header nav .section p > a:any-link {
     border-radius: 0;
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
     justify-content: center;
     /* padding-inline: 10px; */
 }
@@ -272,7 +273,7 @@ header nav .section .default-content-wrapper.left-side {
     margin: 0;
     margin-right: auto;
     justify-content: start;
-    gap: 10px;
+    gap: 20px;
 }
 nav .section > div {
     display: flex;
@@ -327,4 +328,28 @@ nav .logo img {
     nav .actions-list > div > *:first-child {
         display: none;
     }
+}
+
+#nav-overlay-menu {
+    display: block;
+    width: 350px;
+    height: calc(100vh - 64px);
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 64px;
+}
+
+@media (width > 800px) {
+    #nav-overlay-menu {
+        width: 100%;
+    }
+}
+
+nav[data-open='true'] #nav-overlay-menu {
+    /* display: flex; */
+}
+
+nav[data-open='false'] #nav-overlay-menu {
+    display: none;
 }

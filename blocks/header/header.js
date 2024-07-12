@@ -1,6 +1,8 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+const mobileViewMenu = `(width <= 800px)`;
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -12,22 +14,33 @@ export default async function decorate(block) {
         ? new URL(navMeta, window.location).pathname
         : '/nav';
     const fragment = await loadFragment(navPath);
-    console.log(navPath, fragment);
+    console.log(navPath, fragment.children);
     // decorate nav DOM
     block.textContent = '';
     const nav = document.createElement('nav');
     nav.id = 'nav';
-    console.log(fragment);
-    while (fragment.firstElementChild) nav.append(fragment.firstElementChild);
-
+    while (fragment.firstElementChild && nav.children.length < 1)
+        nav.append(fragment.firstElementChild);
+    const overlayData = fragment.firstElementChild;
     // hamburger for mobile
     const hamburger = document.createElement('div');
     hamburger.classList.add('nav-hamburger');
+    nav.dataset.open = 'false';
     hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>
     <span class="nav-hamburger-text">MENU</span>
     `;
+    hamburger.addEventListener('click', function () {
+        nav.dataset.open = nav.dataset.open === 'false' ? 'true' : 'false';
+    });
+
+    const overLay = document.createElement('div');
+
+    overLay.id = 'nav-overlay-menu';
+    overLay.appendChild(overlayData);
+    nav.appendChild(overLay);
+
     const logo = document.createElement('div');
     logo.classList.add('logo');
     logo.innerHTML = `
