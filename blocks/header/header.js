@@ -1,6 +1,8 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
+const mobileViewMenu = `(width <= 800px)`;
+
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -23,11 +25,25 @@ export default async function decorate(block) {
     // hamburger for mobile
     const hamburger = document.createElement('div');
     hamburger.classList.add('nav-hamburger');
+    hamburger.dataset.open = false;
     hamburger.innerHTML = `<button type="button" aria-controls="nav" aria-label="Open navigation">
       <span class="nav-hamburger-icon"></span>
     </button>
     <span class="nav-hamburger-text">MENU</span>
     `;
+    hamburger.addEventListener('click', function () {
+        this.dataset.open = this.dataset.open === 'false' ? 'true' : 'false';
+        document.getElementById('nav-overlay-menu').style.display =
+            this.dataset.open === 'false' ? 'none' : '';
+    });
+
+    const overLay = document.createElement('div');
+
+    overLay.id = 'nav-overlay-menu';
+    overLay.style.display = 'none';
+
+    document.body.appendChild(overLay);
+
     const logo = document.createElement('div');
     logo.classList.add('logo');
     logo.innerHTML = `

@@ -18,7 +18,6 @@ const setupVisibility = (block) => {
     const currentBreakpoint = (Object.entries(mediaQueries).find(
         (value) => window.matchMedia(value[1]).matches
     ) || ['desktop'])[0];
-    console.log(currentBreakpoint);
     const maxElements = maxElementsPerView[currentBreakpoint];
     const viewMore =
         block.parentElement.querySelectorAll('.stories-view-more')[0];
@@ -74,6 +73,5 @@ export default function decorate(block) {
             block.nextSibling.classList.contains('stories-view-more')
         )
             return;
-        console.log('created');
     }
 }

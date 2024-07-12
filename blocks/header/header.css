@@ -329,3 +329,19 @@ nav .logo img {
         display: none;
     }
 }
+
+#nav-overlay-menu {
+    display: block;
+    width: 350px;
+    height: calc(100vh - 64px);
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 64px;
+}
+
+@media (width > 800px) {
+    #nav-overlay-menu {
+        width: 100%;
+    }
+}
