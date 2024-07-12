@@ -322,3 +322,9 @@ nav .logo img {
     height: 64px;
     width: 64px;
 }
+
+@media (width < 500px) {
+    nav .actions-list > div > *:first-child {
+        display: none;
+    }
+}
