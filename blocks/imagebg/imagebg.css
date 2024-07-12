@@ -42,6 +42,7 @@
 
     /* margin: 10px; */
     padding: 0;
+    z-index: 4;
 }
 
 .block .imagebg > div {
