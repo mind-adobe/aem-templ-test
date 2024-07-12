@@ -1,47 +1,56 @@
 .imagebg {
-	position: relative;
+    position: relative;
 }
 
 .imagebg ul {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	overflow: hidden;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
 }
 
 .imagebg img {
-	width: 100%;
-	height: 100%;
-	max-height: 450px;
-	object-fit: cover;
-	inset: 0;
-	opacity: 50%;
-	box-sizing: border-box;
-	border: 1px solid #eaeaea;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    inset: 0;
+    opacity: 0.3;
+    box-sizing: border-box;
+    border: 1px solid #eaeaea;
 }
 
 .imagebg-content {
-	align-items: center;
-	z-index: 4;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	flex-direction: column;
-	width: 90%;
-	text-align: center;
-	height: 100%;
-	overflow: hidden;
-	padding-inline: 40px;
-	display: flex;
-	justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+    overflow: hidden;
+    padding-inline: 40px;
+    display: flex;
+    justify-content: center;
+
+    /* padding: 5px; */
 }
 
 .imagebg-content * {
-	margin-left: auto;
-	margin-right: auto;
-	color: white;
-	display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    display: inline;
+
+    /* margin: 10px; */
+    padding: 0;
+}
+
+.block .imagebg > div {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(50px, min-content);
+}
+
+.block.imagebg > div > div:first-child {
+    position: absolute;
+    /* align-self: stretch; */
+    height: 100%;
+    width: 100%;
 }

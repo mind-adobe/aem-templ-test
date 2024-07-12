@@ -1,98 +1,98 @@
 :root {
-	--text-c: rgb(148, 40, 40);
+    --text-c: rgb(148 40 40);
 }
 
 .matchcards.block img {
-	width: 60px;
-	height: 60px;
-	display: inline;
+    width: 60px;
+    height: 60px;
+    display: inline;
 }
 
 .matchcards.block .score {
-	/* font-size */
+    /* font-size */
 }
 
 .matchcards.block > div {
-	display: flex;
-	flex-direction: column;
-	height: 300px;
-	min-width: 250px;
-	width: 250px;
-	background-color: white;
-	padding: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    min-width: 250px;
+    width: 250px;
+    background-color: white;
+    padding: 10px;
 }
 
 .matchcards.block {
-	display: flex;
-	width: 100%;
-	overflow-x: auto;
-	align-items: center;
-	text-align: center;
-	gap: 20px;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
 }
 
 .matchcards.block .tag,
 .date {
-	font-size: var(--body-font-size-xxs);
-	margin: 0;
+    font-size: var(--body-font-size-xxs);
+    margin: 0;
 }
 
 .matchcards.block .tag {
-	color: var(--text-c);
+    color: var(--text-c);
 }
 
 .matchcards.block .date {
-	color: gray;
+    color: gray;
 }
 
 .matchcards.block .logo1,
 .logo2 {
-	width: 30%;
-	display: inline;
+    width: 30%;
+    display: inline;
 }
 
 .matchcards.block .logo1 {
-	margin-right: -10px;
+    margin-right: -10px;
 }
 
 .matchcards.block .logo2 {
-	margin-left: -10px;
-	display: inline-block;
-	flex-basis: 100%;
+    margin-left: -10px;
+    display: inline-block;
+    flex-basis: 100%;
 }
 
 .matchcards.block .team-name {
-	font-size: var(--body-font-size-s);
-	display: inline;
-	font-weight: 450;
+    font-size: var(--body-font-size-s);
+    display: inline;
+    font-weight: 450;
 }
 
 .matchcards.block .vs-team {
-	display: inline;
-	font-size: var(--body-font-size-xxs);
-	margin-inline: 5px;
+    display: inline;
+    font-size: var(--body-font-size-xxs);
+    margin-inline: 5px;
 }
 
 .matchcards.block .time {
-	background-color: #eaeaea;
-	padding: 5px;
-	display: inline-flex;
-	width: 100px;
-	height: 30px;
-	align-items: center;
-	justify-content: center;
-	font-size: var(--body-font-size-s);
-	color: gray;
+    background-color: #eaeaea;
+    padding: 5px;
+    display: inline-flex;
+    width: 100px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--body-font-size-s);
+    color: gray;
 }
 
 .matchcards.block .extra-text {
-	align-self: flex-end;
-	margin: 0;
-	padding: 0;
-	font-size: var(--body-font-size-xxs);
+    align-self: flex-end;
+    margin: 0;
+    padding: 0;
+    font-size: var(--body-font-size-xxs);
 }
 
 .matchcards.block .extra-text > a {
-	color: var(--text-c);
-	text-decoration: underline;
+    color: var(--text-c);
+    text-decoration: underline;
 }
