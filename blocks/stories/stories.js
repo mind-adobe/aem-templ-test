@@ -64,14 +64,10 @@ export default function decorate(block) {
 
         setupVisibility(block);
 
-        for (let q of Object.values(mediaQueries))
+        Object.values(mediaQueries).forEach((q) =>
             window
                 .matchMedia(q)
-                .addEventListener('change', () => setupVisibility(block));
-        if (
-            block.nextSibling &&
-            block.nextSibling.classList.contains('stories-view-more')
-        )
-            return;
+                .addEventListener('change', () => setupVisibility(block))
+        );
     }
 }

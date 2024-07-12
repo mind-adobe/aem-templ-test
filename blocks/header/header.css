@@ -12,6 +12,7 @@ header .nav-wrapper {
 
 header nav {
     box-sizing: border-box;
+
     /* display: grid; */
     grid-template:
         'hamburger brand tools' var(--nav-height)
@@ -207,6 +208,7 @@ header nav .default-content-wrapper {
 header nav .section .default-content-wrapper {
     display: flex;
     justify-content: space-between;
+
     /* width: 100%; */
 }
 
@@ -234,6 +236,7 @@ header nav .section .default-content-wrapper p .icon-logo {
 
 header nav .section p a {
     /* border-left: 1px solid #eaeaea; */
+    /* margin-inline: 10px; */
 }
 
 @media (width >= 900px) {
@@ -255,6 +258,7 @@ header nav .section p > a:any-link {
     align-items: center;
     text-wrap: nowrap;
     justify-content: center;
+
     /* padding-inline: 10px; */
 }
 
@@ -262,6 +266,7 @@ header nav .section p {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* padding-inline: 10px; */
 }
 
 nav .default-content-wrapper.left-side .button-container:first-of-type a {
@@ -275,11 +280,14 @@ header nav .section .default-content-wrapper.left-side {
     justify-content: start;
     gap: 20px;
 }
+
 nav .section > div {
     display: flex;
+
     /* justify-content: center; */
     flex: 2;
 }
+
 nav .logo {
     margin: 0;
     display: inline;
@@ -301,6 +309,7 @@ nav .actions-list > div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     /* gap: 25px; */
 }
 
@@ -352,4 +361,8 @@ nav[data-open='true'] #nav-overlay-menu {
 
 nav[data-open='false'] #nav-overlay-menu {
     display: none;
+}
+
+#nav > div.section > div.default-content-wrapper.left-side > p:first-of-type {
+    gap: 10px;
 }

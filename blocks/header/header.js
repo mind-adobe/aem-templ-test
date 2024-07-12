@@ -1,8 +1,6 @@
 import { getMetadata } from '../../scripts/aem.js';
 import { loadFragment } from '../fragment/fragment.js';
 
-const mobileViewMenu = `(width <= 800px)`;
-
 /**
  * loads and decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -31,7 +29,7 @@ export default async function decorate(block) {
     </button>
     <span class="nav-hamburger-text">MENU</span>
     `;
-    hamburger.addEventListener('click', function () {
+    hamburger.addEventListener('click', () => {
         nav.dataset.open = nav.dataset.open === 'false' ? 'true' : 'false';
     });
 
