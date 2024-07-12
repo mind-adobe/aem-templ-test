@@ -1,6 +1,6 @@
 const mediaQueries = {
-    mobile: `(width <= 500px)`,
-    tablet: `(width > 500px) and (width < 880px)`,
+    mobile: `(width <= 400px)`,
+    tablet: `(width > 400px) and (width < 880px)`,
     desktop: `(width > 880px )`,
 };
 

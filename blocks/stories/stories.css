@@ -48,7 +48,7 @@
     color: unset;
 }
 
-@media (width <= 500px) {
+@media (width <= 400px) {
     .stories-card {
         width: 80vw;
     }
@@ -62,10 +62,10 @@
     }
 }
 
-@media (width > 600px) {
+@media (width > 400px) {
     .stories-card {
         width: 45%;
-        min-width: 180px;
+        /* min-width: 180px; */
         align-self: stretch;
     }
 
