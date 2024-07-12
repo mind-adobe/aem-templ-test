@@ -20,7 +20,7 @@
 
 .stories-card-img picture img {
     aspect-ratio: 1.6/1;
-    object-fit: fill;
+    object-fit: cover;
     width: 100%;
 }
 
